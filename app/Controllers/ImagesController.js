@@ -8,15 +8,11 @@ function _drawImg() {
 
 
 
-
-
-
 export class ImagesController {
 
   constructor() {
     ProxyState.on('images', _drawImg)
     this.getImages()
-
 
   }
 

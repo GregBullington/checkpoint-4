@@ -5,6 +5,8 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = []
 
+  toDoItems = []
+
   images = null
 
   quotes = null

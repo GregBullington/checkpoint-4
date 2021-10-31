@@ -2,6 +2,7 @@
  body {
    background-size: cover;
    background-position: center;
+   text-shadow: 2px 2px black;
  }
 
  footer {
@@ -9,3 +10,19 @@
   color: rgb(221, 221, 221);
   font-size: 20px;
  }
+
+ .card.list {
+  max-width: 250px;
+  min-height: 150px;
+  background: rgba(0, 0, 0, 0.685);
+  color: azure;
+}
+
+#addToList {
+  background-color: rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+}
+
+#addToList:focus {
+  box-shadow: none;
+}
