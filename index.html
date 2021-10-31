@@ -25,18 +25,15 @@
 
 
   <main class="container-fluid">
-    <div>
-      <div class="row justify-content-center">
-        <div class="col-md-6 text-center m-5 p-5 text-light">
-          <h1>BIG CLOCK</h1>
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center m-5 p-5 text-light">
+        <h1>BIG CLOCK</h1>
       </div>
     </div>
     <div id="todo" class="row justify-content-end">
       <div class="col-md-4 card list m-1 align-items-start">
         <div class="mt-1" id="listItems">
-
-
+          <!--List Items-->
         </div>
         <div class="mt-auto">
           <form onsubmit="app.toDoController.addItem(id)">
@@ -44,7 +41,7 @@
               <input type="text" class="form-control bg-none text-light" name="description" id="addToList"
                 aria-describedby="helpId" placeholder="New ToDo...." required minlength="3" maxlength="50">
               </input>
-              <button class="btn btn-sm" type="submit">➕</button>
+              <button class="btn btn-sm" id="addToList" type="submit">➕</button>
             </div>
           </form>
         </div>

@@ -20,7 +20,7 @@ export class ToDo {
       ${this.description}
     </label>
     </input>
-    <button class="btn btn-sm gxbtn" type="submit"
+    <button class="btn btn-sm gxbtn" id="removeItem" type="submit"
       onclick="app.toDoController.deleteItem('${this.id}')">✖</button>
       </div>`
   }

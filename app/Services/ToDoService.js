@@ -26,8 +26,10 @@ class ToDoService {
     ProxyState.toDoItems = ProxyState.toDoItems
   }
   async deleteItem(id) {
-    await sandBox.delete('gregs/todos/' + id)
-    ProxyState.toDoItems = ProxyState.toDoItems.filter(item => item.id != id)
+    if (window.confirm('Are you sure you want to delete this item in your list?')) {
+      await sandBox.delete('gregs/todos/' + id)
+      ProxyState.toDoItems = ProxyState.toDoItems.filter(item => item.id != id)
+    }
   }
 
 }

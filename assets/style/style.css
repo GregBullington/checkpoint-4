@@ -26,3 +26,15 @@
 #addToList:focus {
   box-shadow: none;
 }
+#removeItem:focus {
+  box-shadow: none;
+}
+
+.hide {
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.reveal:hover .hide{
+  opacity: 1!important;
+}
