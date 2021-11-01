@@ -20,15 +20,15 @@
 <body class=" container-fluid img-fluid " id="body">
   <header class="text-light">
     <div class="row justify-content-end text-end">
-      <div class="col-md-2 selectable" onclick="app.weatherController.changeTemp()" id="weather">
+      <div class="col-md-2 selectable m-3 w-10 weather" onclick="app.weatherController.changeTemp()" id="weather">
         <!--Weather-->>
       </div>
     </div>
   </header>
 
 
-  <main class="container-fluid">
-    <div class="row justify-content-center">
+  <main class="row container-fluid justify-content-center align-items-center">
+    <div class="d-flex justify-content-center mt-auto">
       <div class="col-md-6 clock text-center" id="clock">
         <!--Clock-->
         <span class="clock-time"></span>
@@ -36,17 +36,18 @@
         <div>
           <span class="clock-phrase"></span>
         </div>
-      </div>
-      <div class="text-light text-center mt-5">
-        <h4>What is your main focus for today?</h4>
-        <form>
-          <input type="text" class="transparent w-25 text-light">
-        </form>
+        <!--focus-->
+        <div class="text-light text-center">
+          <h4>What is your main focus for today?</h4>
+          <form>
+            <input type="text" class="transparent w-50 text-light">
+          </form>
+        </div>
       </div>
     </div>
-    <div id="todo" class="row justify-content-end">
-      <div class="col-md-3 card list m-1 align-items-start">
-        <div class="" id="incompleteItems">
+    <div id="todo" class="d-flex justify-content-end">
+      <div class="col-md-3 card list align-items-start">
+        <div class="p-1" id="incompleteItems">
           <p>
             <b>
               ToDo's: 0/0
@@ -80,7 +81,7 @@
           <div class="col-md-2 text-center">
             <i class="mdi mdi-cog-outline"></i>
           </div>
-          <div class="col-md-10" id="img-Details">
+          <div class="col-md-10 mb-1" id="img-Details">
             <!--Bottom left info-->
           </div>
         </div>

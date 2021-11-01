@@ -1,7 +1,5 @@
 /* BASIC STYLES HERE */
-header {
-  min-height: 15vh;
-} 
+
 
 body {
    background-size: cover;
@@ -55,17 +53,17 @@ body {
 .clock-time,
 .clock-ampm {
   font-family: 'Titan One', cursive;
-  font-size: 100px;
+  font-size: 75px;
   color: rgb(233, 233, 233);
 }
 .clock-phrase {
   font-family: 'Titan One', cursive;
-  font-size: 50px;
+  font-size: 25px;
   color: rgb(233, 233, 233);
 }
 
 .clock-time {
-  font-size: 150px;
+  font-size: 110px;
 }
 
 .transparent {
@@ -86,3 +84,6 @@ outline: none;
   outline: none;
 }
 
+.weather:hover:after {
+  opacity: 0;
+}

@@ -4,7 +4,7 @@ import { quotesService } from "../Services/QuotesService.js"
 
 
 function _drawQuotes() {
-  document.getElementById('quotes').innerHTML = `<div class="reveal"> <p><b>${ProxyState.quotes.content}</b></p> <p class="hide"><b>${ProxyState.quotes.author}</b></p></div>`
+  document.getElementById('quotes').innerHTML = `<div class="reveal"> <p class="m-0"><b>${ProxyState.quotes.content}</b></p> <p class="hide m-0"><b>${ProxyState.quotes.author}</b></p></div>`
 }
 
 
