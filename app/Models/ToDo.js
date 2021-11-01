@@ -26,27 +26,27 @@ export class ToDo {
   }
 
 
-  get itemTemplate() {
-    return `
-  <p>
-    <b>
-      ToDo's: ${this.incomplete} / ${this.itemCount}
-    </b>
-  </p>
-    
-    `
-  }
+  // get itemTemplate() {
+  //   return `
+  // <p>
+  //   <b>
+  //     ToDo's: ${this.incomplete} / ${this.itemCount}
+  //   </b>
+  // </p>
 
-  get itemCount() {
-    const tasksItems = ProxyState.toDoItems.filter(tI => this.id == tI.tasksId)
-    return tasksItems.length
-  }
-  get incomplete() {
-    let unchecked = ProxyState.toDoItems.filter(tI => this.id == tI.tasksId)
-    let incomplete = unchecked.filter(tI => tI.completed == false)
-    return incomplete.length
+  //   `
+  // }
 
-  }
+  // get itemCount() {
+  //   const tasksItems = ProxyState.toDoItems.filter(tI => this.id == tI.tasksId)
+  //   return tasksItems.length
+  // }
+  // get incomplete() {
+  //   let unchecked = ProxyState.toDoItems.filter(tI => this.id == tI.tasksId)
+  //   let incomplete = unchecked.filter(tI => tI.completed == false)
+  //   return incomplete.length
+
+  // }
 
 }
 
