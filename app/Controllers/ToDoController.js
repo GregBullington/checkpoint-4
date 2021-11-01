@@ -7,6 +7,13 @@ function _drawItems() {
   let template = ``
   items.forEach(item => template += item.Template)
   document.getElementById('listItems').innerHTML = template
+  document.getElementById('incompleteItems').innerHTML = `
+<p>
+  <b>
+    ToDo Items: 0 /${ProxyState.toDoItems.length}
+  </b>
+</p>
+  `
 }
 
 
@@ -14,7 +21,6 @@ function _drawItems() {
 export class ToDoController {
   constructor() {
     ProxyState.on('toDoItems', _drawItems)
-
     this.getItems()
   }
 
