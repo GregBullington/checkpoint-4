@@ -8,7 +8,10 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>checkpoint-4</title>
@@ -17,8 +20,8 @@
 <body class=" container-fluid img-fluid " id="body">
   <header class="text-light">
     <div class="row justify-content-end text-end">
-      <div class="col-md-12">
-        Lorem ipsum
+      <div class="col-md-2 selectable" onclick="app.weatherController.changeTemp()" id="weather">
+        <!--Weather-->>
       </div>
     </div>
   </header>
@@ -26,12 +29,30 @@
 
   <main class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-md-6 text-center m-5 p-5 text-light">
-        <h1>BIG CLOCK</h1>
+      <div class="col-md-6 clock text-center" id="clock">
+        <!--Clock-->
+        <span class="clock-time"></span>
+        <span class="clock-ampm"></span>
+        <div>
+          <span class="clock-phrase"></span>
+        </div>
+      </div>
+      <div class="text-light text-center mt-5">
+        <h4>What is your main focus for today?</h4>
+        <form>
+          <input type="text" class="transparent w-25 text-light">
+        </form>
       </div>
     </div>
     <div id="todo" class="row justify-content-end">
-      <div class="col-md-4 card list m-1 align-items-start">
+      <div class="col-md-3 card list m-1 align-items-start">
+        <div class="" id="incompleteItems">
+          <p>
+            <b>
+              ToDo's: 0/0
+            </b>
+          </p>
+        </div>
         <div class="mt-1" id="listItems">
           <!--List Items-->
         </div>
@@ -39,7 +60,8 @@
           <form onsubmit="app.toDoController.addItem(id)">
             <div class="input-group mb-1">
               <input type="text" class="form-control bg-none text-light" name="description" id="addToList"
-                aria-describedby="helpId" placeholder="New ToDo...." required minlength="3" maxlength="50">
+                aria-describedby="helpId" placeholder="New ToDo...." autocomplete="off" required minlength="3"
+                maxlength="50">
               </input>
               <button class="btn btn-sm" id="addToList" type="submit">➕</button>
             </div>
@@ -53,8 +75,24 @@
 
   <footer class="container-fluid">
     <div class="row justify-content-center">
+      <div class="col-md-2 text-start">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-2 text-center">
+            <i class="mdi mdi-cog-outline"></i>
+          </div>
+          <div class="col-md-10" id="img-Details">
+            <!--Bottom left info-->
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-1">
+      </div>
       <div id="quotes" class="col-md-6 text-center no-select">
         <!--Quotes-->
+      </div>
+      <div class="col-md-3">
       </div>
     </div>
   </footer>

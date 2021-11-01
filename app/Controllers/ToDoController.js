@@ -1,6 +1,4 @@
 import { ProxyState } from "../AppState.js"
-import { ToDo } from "../Models/ToDo.js";
-import { sandBox } from "../Services/AxiosService.js";
 import { toDoService } from "../Services/ToDoService.js"
 
 
@@ -12,12 +10,12 @@ function _drawItems() {
 }
 
 
+
 export class ToDoController {
   constructor() {
     ProxyState.on('toDoItems', _drawItems)
 
     this.getItems()
-    console.log("ToDo working");
   }
 
   async addItem(id) {
@@ -31,6 +29,8 @@ export class ToDoController {
         id: id
       }
       toDoService.addItem(itemData)
+      //@ts-ignore
+      form.reset()
 
     } catch (error) {
       console.log(error);
@@ -63,7 +63,6 @@ export class ToDoController {
     } catch (error) {
       console.log(error);
     }
-
   }
 
 }

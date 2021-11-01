@@ -1,21 +1,25 @@
 /* BASIC STYLES HERE */
- body {
+header {
+  min-height: 15vh;
+} 
+
+body {
    background-size: cover;
    background-position: center;
-   text-shadow: 2px 2px black;
+   text-shadow: 1px 1px rgb(34, 34, 34);
  }
 
  footer {
   text-shadow: 2px 2px black;
-  color: rgb(221, 221, 221);
+  color: rgb(233, 233, 233);
   font-size: 20px;
  }
 
  .card.list {
   max-width: 250px;
   min-height: 150px;
-  background: rgba(0, 0, 0, 0.685);
-  color: azure;
+  background: rgba(0, 0, 0, 0.548);
+  color: rgb(233, 233, 233);
 }
 
 #addToList {
@@ -38,3 +42,47 @@
 .reveal:hover .hide{
   opacity: 1!important;
 }
+
+.strikeout {
+ text-decoration-line: line-through;
+}
+
+.clock {
+  background: none;
+  border: none;
+}
+
+.clock-time,
+.clock-ampm {
+  font-family: 'Titan One', cursive;
+  font-size: 100px;
+  color: rgb(233, 233, 233);
+}
+.clock-phrase {
+  font-family: 'Titan One', cursive;
+  font-size: 50px;
+  color: rgb(233, 233, 233);
+}
+
+.clock-time {
+  font-size: 150px;
+}
+
+.transparent {
+background: none;
+border: none;
+border-bottom: 2px solid rgb(233, 233, 233);
+outline: none;
+
+
+}
+.transparent:focus {
+box-shadow: none;
+outline: none;
+}
+.transparent::after {
+  box-shadow: none;
+  inset: none;
+  outline: none;
+}
+
