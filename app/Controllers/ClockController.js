@@ -17,7 +17,7 @@ export class ClockController {
     const minuteFormatted = parts.minute.toString().padStart(2, "0")
     const timeFormatted = `${parts.hour}:${minuteFormatted}`
     const amPm = parts.isAm ? "AM" : "PM"
-    const phrase = parts.isAm ? "Good morning, Greg" : "Good evening, Greg"
+    const phrase = parts.isAm ? "Good Morning" : "Good Evening"
 
     this.element.querySelector(".clock-time").textContent = timeFormatted
     this.element.querySelector(".clock-ampm").textContent = amPm
